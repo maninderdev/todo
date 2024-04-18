@@ -1,0 +1,123 @@
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-style: normal;
+    src: url('../font/inter-roman.woff2');
+}
+
+@font-face {
+    font-family: 'Inter var';
+    font-weight: 100 900;
+    font-style: italic;
+    src: url('../font/inter-roman.woff2');
+}
+
+.todo-main {
+    width: 700px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+div#root {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    background-image: url(/images/body-bg.png);
+    font-family: 'Inter var', sans-serif;
+}
+
+.todo-header {
+    text-align: center;
+}
+
+.todo-header .controls-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.primary-button {
+    background-color: rgb(15, 23, 42);
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Inter var', sans-serif;
+}
+
+select#sort-by {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    border-color: #6b7280;
+    border-radius: 0.375rem;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgb(209, 213, 219) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 6px 32px 6px 12px;
+    width: 170px;
+    max-width: 100%;
+}
+
+.todo-header .logo-wrapper {
+    margin-bottom: 15px;
+}
+
+.todo-content {}
+
+.todo-content .head-label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo-content .todo-count {}
+
+.todo-content .out-of {
+    display: inline-block;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 6px 16px;
+    border-radius: 20px;
+}
+
+.task-listing {}
+
+.task-item {}
+
+.task-item {
+    display: flex;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.task-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appreance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(209, 213, 219);
+    border-radius: 6px;
+}
+
+.task-item .title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
