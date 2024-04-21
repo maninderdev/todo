@@ -120,7 +120,7 @@ select#sort-by, select {
     display: flex;
     box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
     border-radius: 8px;
-    padding: 20px;
+    padding: 20px 16px 20px;
     margin-bottom: 20px;
     transition: all 0.5s ease;
 }
@@ -144,10 +144,16 @@ select#sort-by, select {
     margin: 0;
     font-size: 14px;
     font-weight: 400;
-    margin: 0 12px 0;
-    flex-grow: 1;
 }
-
+.task-item .content{
+    flex-grow: 1;
+    margin: 0 12px 0;
+}
+.task-item .content .date {
+    font-size: 13px;
+    margin-top: 6px;
+    color: #9c9c9c;
+}
 .task-item .cta-wrapper .del-todo {
     background-color: rgb(15, 23, 42);
     color: #fff;
@@ -308,7 +314,19 @@ button.secondary-btn {
     max-width: 100%;
     font-size: 14px;
 }
-
+.task-listing .no-results {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 0;
+    width: max-content;
+    margin: auto;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px inset, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
 /*******Media Query************/
 @media(max-width: 767px){
     .todo-header .logo-wrapper {

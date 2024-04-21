@@ -53,7 +53,6 @@ const todoSlice = createSlice({
             }
         },
         updateTodo: (state, action) => {
-            console.log(action.payload);
             const todoList = window.localStorage.getItem('todo');
             if(todoList){
                 const todoArr = JSON.parse(todoList);

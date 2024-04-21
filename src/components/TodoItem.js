@@ -33,7 +33,10 @@ function TodoItem({item}){
             <div className="status-task">
                 <input type="checkbox" id="todo-1" name="todo-1" onChange={(e) => {handleCheckbox(e)}} {...(todoChecked && { defaultChecked: true })}/>
             </div>
-            <h4 className='title'>{(item.title)}</h4>
+            <div className="content">
+                <h4 className='title'>{(item.title)}</h4>
+                <div className="date">{(item.time)}</div>
+            </div>
             <div className="cta-wrapper">
                 <button className='del-todo' onClick={()=>{handleDel()}}><FaRegTrashCan/></button>
             </div>

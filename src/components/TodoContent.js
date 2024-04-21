@@ -5,7 +5,9 @@ function TodoContent(){
     const todoList = useSelector(state => state.todo.todoList);
     const filterStatus = useSelector(state => state.todo.filterStatus);
     const sortedArr = [...todoList];
+    console.log(sortedArr);
     sortedArr.sort((a,b) => new Date(b.time) - new Date(a.time));
+    console.log(sortedArr);
 
     const filterArr = sortedArr.filter((item) => {
         if(filterStatus === 'all'){
@@ -29,10 +31,16 @@ function TodoContent(){
                 <span className="completed-count">Completed: <span className="out-of">{completedCount()} of {todoList.length}</span></span>
             </div>
             <div className="task-listing">
-                {
+                { filterArr.length !== 0 &&
                     filterArr.map((item) => (
                         <TodoItem key={item.id} item={item} />
                     ))
+                }
+                {
+                    filterArr.length === 0 &&
+                    (
+                        <div className="no-results">No Todo  Found</div>
+                    )
                 }
             </div>
         </div>

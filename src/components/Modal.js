@@ -26,7 +26,7 @@ function Modal({ modalOpen , setModalOpen}){
                     id: uuid(),
                     title: title,
                     status: status,
-                    time: format(new Date(), "p,yyyy-MM-dd")
+                    time: format(new Date(), "hh:mm:ss a,yyyy-MM-dd")
                 })
             )
             setTitle('');
