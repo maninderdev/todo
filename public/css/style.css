@@ -40,6 +40,7 @@ body.overflow-hidden {
 
 .container {
     width: 700px;
+    max-width: 100%;
     margin: auto;
     padding: 30px 20px;
     position: relative;
@@ -103,6 +104,7 @@ select#sort-by, select {
 .todo-content .head-label {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -198,6 +200,7 @@ select#sort-by, select {
 .modal-wrapper .modal-dialog {
     max-width: 500px;
     margin: 1.75rem auto;
+    padding: 0 20px;
     position: relative;
     z-index: 1;
     min-height: calc(100vh - calc(1.75rem * 2));
@@ -305,3 +308,35 @@ button.secondary-btn {
     max-width: 100%;
     font-size: 14px;
 }
+
+/*******Media Query************/
+@media(max-width: 767px){
+    .todo-header .logo-wrapper {
+        margin-bottom: 22px;
+    }
+    .container {
+        padding: 16px 20px;
+    }
+    .primary-button {
+        font-size: 14px;
+    }
+    select#sort-by, select {
+        width: 140px;
+    }
+    .todo-content .head-label {
+        font-size: 14px;
+    }
+    .task-item {
+        padding: 10px;
+    }
+    .todo-main::before {
+        background-size: 1500px 1000px;
+        background-repeat: no-repeat;
+        background-position: calc(29% + 190px) 50%;
+        opacity: 0.6;
+    }
+    .modal-wrapper .modal-content {
+        padding: 20px;
+    }
+}
+/*******Media Query End********/

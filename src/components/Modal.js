@@ -12,6 +12,7 @@ function Modal({ modalOpen , setModalOpen}){
 
     const [title, setTitle] = useState('');
     const [status, setStatus] = useState('incomplete');
+    
     const dispatch = useDispatch(); 
 
     const handleSubmit = (e) => {
@@ -28,7 +29,10 @@ function Modal({ modalOpen , setModalOpen}){
                     time: format(new Date(), "p,yyyy-MM-dd")
                 })
             )
+            setTitle('');
+            setStatus('incomplete')
             toast.success('TODO Added Successfully');
+            setModalOpen(false);
         }
         return false;
     }

@@ -9,8 +9,11 @@ function App() {
     <div className='todo-main'>
       <div className='container'>
         <TodoHeader />
-        <TodoContent />
-        <Toaster />
+        <TodoContent />           
+        <Toaster
+          position="bottom-right"
+          reverseOrder={false}
+        />
       </div>
     </div>
   );
